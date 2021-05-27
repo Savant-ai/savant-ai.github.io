@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+/* Testing Collapsible CSS */
+.collapsible{
+	/* background-color: #eee;
+	color: #444; */
+	/* cursor: pointer; */
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
 
+.active, .collapsible:hover {
+	/* background-color: #ccc; */
+}
+
+.content {
+	display: none;
+	padding: 0 18px;
+	/* max-height: 0; */
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+/* Previously writtent CSS */
 * {
 	padding: 0;
 	margin: 0;
