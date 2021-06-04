@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+    <!-- Searchable Metadata -->
     <meta charset="UTF-8">
     <title>Savantium: Artificial intelligence consulting</title>
-    
     <meta name="keywords" content= "AI, artificial intelligence, savantium, savantium.org, smart city, smart cities, disasters, disaster management, natural disasters, forecasting, consulting"/>
-
     <meta name="description" content="Welcome to Savantium. Here you can gain access to top of the line AI consultancy services. based in India. services offered across the globe"/>
     
+    <!-- Favicon -->
     <link rel="icon" href="img/symbol.jpg">
     
+    <!-- CSS Stylesheet -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
     <link rel ="stylesheet" href="css/style.css">
     
+    
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    
-    
     <script>
         particlesJS.load('particles-js','js/particles.json', function(){console.log("loaded")})</script>
+    
+    
     
             
       
@@ -54,23 +57,20 @@
     <!--End header section-->
     
    
-<!--<canvas id='canvas1'></canvas>
-                        <script src = "js/alt-particles.json"></script>-->
-
     <!--Title section-->
        
 
-<section id='title'>
-    <div >
-        <div  class="title container">
-            <div id='particles-js'>
-                 <h1>Welcome to<span></span></h1>
-                 <h1>Savantium<span></span></h1> 
+    <section id='title'>
+        <div >
+            <div  class="title container">
+                <div id='particles-js'>
+                    <h1>Welcome to<span></span></h1>
+                    <h1>Savantium<span></span></h1> 
 
+                </div>
             </div>
-        </div>
-    </div>     
-</section> 
+        </div>     
+    </section> 
     
     <!--end title section-->
 
@@ -180,27 +180,30 @@
     <!--end members section-->
      
     <!--Services section-->
-<section id="services">
+    <section id="services">
         <div class="services container">
           <div><h1 class="section-title">Services </h1>
-          <p>Quality assured as efficiently as possible.</p>
+            <p>Quality assured as efficiently as possible.</p>
           </div>
           <div class="services-items">
-            <div class="services-item">
+            <div class="services-item ">
               <div class="services-info">
                 <h1>AI Services</h1>
                 <h2>Learn how to modernize your workflow with Savantium. We will augment your workforce, increase cost efficiency and automate tedious tasks.
-                <h2><a target="_blank" class="cta">Learn more!</a>
+                <h2><button data-toggle="collapse" data-target=".collapse.first" class="cta collapsible">Learn more!</button>
                 
               </div>
             </div>
+            
+
             <div class="services-item">
               <div class="services-info">
                 <h1>Geospatial Services</h1>
                 <h2>We help you tackle your spatial problems using modern remote sensing and GIS soultions. We've produced high definition maps for autonomous vehicles, models for smart cities & precision farming solutions. 
-                <h2><a target="_blank" class="cta">Learn more!</a>
+                <h2><button data-toggle="collapse" data-target=".collapse.second"  class="cta">Learn more!</button>
               </div>
             </div>
+
             <div class="services-item">
               <div class="icon"><img src="./img/symbol.jpg"/></div>
               <div class="services-info">
@@ -209,6 +212,21 @@
               </div>
             </div>
           </div>
+
+          <div class="block collapse first">
+            <div class="block_content">
+              <h2>AI Projects</h2>
+              <p>Text for Ai Services</p>
+            </div>
+          </div>
+
+          <div class="block collapse second ">
+            <div class="block_content">
+              <h2>GeoSpatial Projects</h2>
+              <p>Text for GeoSpatial Services</p>
+            </div>
+          </div>
+
         </div>
       </section>
     <!--end Services section-->
@@ -252,7 +270,7 @@
       
 
   <!-- Footer -->
-<section id='footer'>
+  <section id='footer'>
     <div class ='footer container'>
      
       <div class='brand'><h1>SAVANTIUM</h1></div>
