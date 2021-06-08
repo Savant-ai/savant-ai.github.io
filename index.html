@@ -46,7 +46,7 @@
                 <li><a href="#title" data-after="Home">Home</a></li>
                 <li><a href="#ourGoals" data-after="About Us">About Us</a></li>
                 <li><a href="#services" data-after="Services">Services</a></li>
-                <li><a href="#testimonials" data-after="Testimonials">Testimonials</a></li>
+                <li><a href="#testimonial-cards" data-after="Testimonials-card">Testimonials</a></li>
                 <li><a href="pages/contactform.php">Contact us</a></li>
               </ul>
             </div>
@@ -184,7 +184,8 @@
        
         <div class="services container">
          
-          <div><h1 class="section-title">Services </h1>
+          <div>
+             <h1 class="section-title">Services </h1>
             <p>Quality assured as efficiently as possible.</p>
           </div>
           
@@ -192,11 +193,11 @@
             <div class="services-item ">
               <div class="services-info">
                 <h1>AI Services</h1>
-                <h2>Learn how to modernize your workflow with Savantium. We will augment your workforce, increase cost efficiency and automate tedious tasks.
+                  <h2>Modernize your workflow with Savantium. We will augment your workforce, increase cost efficiency and automate tedious tasks.</h2>
                   <div onclick="off(1)" id="overlay1">
                         <div id="text1">Overlay Text1</div>
                       </div>
-                <h2><button onclick="on(1)" class="cta">Learn more!</button>
+                  <h2><button onclick="on(1)" class="cta">Learn more!</button></h2>
                 <!-- <h2><button data-toggle="collapse" data-target=".collapse.first" class="cta">Learn more!</button> -->
 
                 
@@ -207,12 +208,12 @@
             <div class="services-item">
               <div class="services-info">
                 <h1>Geospatial Services</h1>
-                <h2>We help you tackle your spatial problems using modern remote sensing and GIS soultions. We've produced high definition maps for autonomous vehicles, models for smart cities & precision farming solutions. 
+                  <h2>Tackle your spatial problems using modern remote sensing and GIS soultions.  </h2>
                 <!-- <h2><button data-toggle="collapse" data-target=".collapse.second"  class="cta">Learn more!</button> -->
                   <div onclick="off(2)" id="overlay2">
                       <div id="text2">Overlay Text2</div>
                     </div>
-                <h2><button onclick="on(2)" class="cta">Learn more!</button>
+                    <h2><button onclick="on(2)" class="cta">Learn more!</button></h2>
               </div>
             </div>
 
@@ -245,7 +246,9 @@
     
 
          
-    <!--testimonials section-->
+    <!-- old testimonials section-->
+    
+   <!--
     <section id="testimonials">
         <div class="testimonials container">
           <div><h1 class="section-title">testimonials </h1>
@@ -259,7 +262,7 @@
               </div>
             </div>
             <div class="testimonials-item">
-              <!--<div class="icon"><img src=""></div> -->
+              <!--<div class="icon"><img src=""></div> 
               <div class="testimonials-info">
                 <p>"Artificial Intelligence will make our life easier, and Savantium is being the catalyst towards this transformation"</p>
                 <h2>-Shah Chowdhury, Co-founder & president of <a href="https://www.footstepsbd.org/" target="_blank">Footsteps, Bangladesh</a></h2>
@@ -274,11 +277,79 @@
             </div>
           </div>
         </div>
-      </section>
+      </section>-->
         
-   
+
     
-      <!--end testimonials section-->
+      <!--end old testimonials section-->
+      
+      <!--new testimonials section-->
+      
+      <section id="testimonial-cards">
+        
+          
+
+           
+                <div>
+                <h1 class="section-title">testimonials </h1>   
+                </div>    
+                
+                <div class="testimonialscontainer">
+                <div class="indicator">
+                    <span class="testimonialbtn active"></span>
+                    <span class="testimonialbtn"></span>
+                    <span class="testimonialbtn"></span>
+                </div>
+                <div class="testimonial-cards">
+                 
+
+                    <div class="slide-row" id="slide">
+                        <div class="slide-col">
+                            <div class="testimonial-text">
+                                <p>"Artificial Intelligence will make our life easier, and Savantium is being the catalyst towards this transformation"</p>
+                                <h2>Shah Chowdhury<br> Co-founder & president of <a href="https://www.footstepsbd.org/" target="_blank">Footsteps, Bangladesh</a></h2>
+                            </div>
+
+                            <div class="testimonial-img">
+                                <img src="img/testimonial_images/shah_chowdhury.jpg">
+
+                            </div>
+                        </div>
+
+                        <div class="slide-col">
+                            <div class="testimonial-text">
+                                <p>"greenwood stuff <a href="http://greenwoodproject.org/" target="_blank">greenwood</a></h2>
+                            </div>
+
+                            <div class="testimonial-img">
+                                <img src="img/testimonial_images/shah_chowdhury.jpg">
+
+                            </div>
+                        </div>
+                        
+                        <div class="slide-col">
+                            <div class="testimonial-text">
+                                <p>"Artificial Intelligence will make our life easier, and Savantium is being the catalyst towards this transformation"</p>
+                                <h2>Shah Chowdhury<br> Co-founder & president of <a href="https://www.footstepsbd.org/" target="_blank">Footsteps, Bangladesh</a></h2>
+                            </div>
+
+                            <div class="testimonial-img">
+                                <img src="img/testimonial_images/shah_chowdhury.jpg">
+
+                            </div>
+                        </div>
+
+                  
+                   </div>
+               </div>
+            
+            
+            
+
+              
+      </section>
+      
+      <!--end new testimonials section-->
       
 
   <!-- Footer -->
@@ -307,6 +378,37 @@
   </section>
   <!-- End Footer -->
     <script src="./js/menu.js"></script>
+    
+    <script>
+    var testimonialbtn = document.getElementsByClassName("testimonialbtn");
+    var slide = document.getElementById("slide");
+        
+        testimonialbtn[0].onclick = function(){
+            slide.style.transform="translatex(0px)";
+            
+            for(i=0;i<3;i++){
+                testimonialbtn[i].classList.remove("active");
+                this.classList.add("active");
+            }
+                                              }
+        testimonialbtn[1].onclick = function(){
+            slide.style.transform="translatex(-800px)";
+            
+            for(i=0;i<3;i++){
+                testimonialbtn[i].classList.remove("active");
+                this.classList.add("active");
+                                              }
+        }
+        testimonialbtn[2].onclick = function(){
+            slide.style.transform="translatex(-1600px)";
+            
+            for(i=0;i<3;i++){
+                testimonialbtn[i].classList.remove("active");
+                this.classList.add("active");
+                                              }
+        }
+        
+    </script>
     
 </body>
 </html>

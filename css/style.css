@@ -73,7 +73,8 @@
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;    
+	scroll-behavior: smooth;  
+    overflow-x: hidden;
 }
 a {
 	text-decoration: none;
@@ -418,6 +419,7 @@ p {
 	margin: 0 auto;
 	margin-bottom: 10px;
 }
+
 #services .services-info h1 {
 	font-size: 2.5rem;
 	font-weight: 500;
@@ -496,10 +498,11 @@ p {
 }
 /*end members section*/
 
-/*testimonials section*/
+/* old testimonials section*/
 
+/*
 #testimonials .testimonials {
-	flex-direction: column;
+	
 	max-width: 1200px;
 	margin: 0 auto;
     text-align: center;
@@ -543,8 +546,95 @@ p {
 	font-weight: 500;
 }
 
-/*end testimonials section*/
+*/
 
+/*end old testimonials section*/
+
+/*new testimonials section*/
+.slide-row{
+    display: flex;
+    width:3200px;  
+    transition: 0.5s;
+}
+.slide-col{
+    width:800px;
+    height: 400px;
+    position: relative;
+    
+}
+
+
+
+#testimonial-cards{
+    margin: 50px;
+    padding-top: 80px;
+}
+
+.testimonialscontainer{
+    position: relative;
+    left:30%;
+}
+.testimonial-img{
+    position:relative;
+    top:0;
+    right:-60%;
+    height:100% ;
+}
+.testimonial-img img{
+    height:100%;
+    width: 40%;
+    
+    border-radius: 10px;
+}
+.testimonial-text{
+    background: #DFE8E0;
+    width:520px;
+    height:270px;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    
+    padding:45px;
+    box-sizing:border-box;
+    z-index: 2;
+
+}
+.testimonial-text p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.indicator{
+    position: relative;
+    left:65%;
+    transform: translateX(-50%);
+    bottom:-450px;
+}
+.testimonialbtn{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin:4px;
+    border-radius:15px;
+    background: black;
+    cursor: pointer;   
+    transition: 0.5s;
+}
+.active{
+    width:35px;
+}
+
+.testimonial-cards{
+    width: 800px;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+
+
+/*end new testimonials section*/
 
 /* Footer */
 #footer {
