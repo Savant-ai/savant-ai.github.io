@@ -13,8 +13,18 @@
     
     <!-- CSS Stylesheet -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+    
+    <!-- stylesheets -->
     <link rel ="stylesheet" href="css/style.css">
     
+    <link rel ="stylesheet"
+ href="css/lightslider.css">  
+   
+     <!--jquery-->
+     <script type="text/javascript" src="js/jquery-3.5.1.js"></script> 
+     
+     <!--lightslider JS-->
+     <script type ="text/javascript" src="js/lightslider.js"></script>
     
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -181,38 +191,69 @@
     
     <!--new members section-->
     <section id="members">
-       <div class="container">
+      
+       <div class="member container">
        
-        <div class="membercarda">
-            <div class="membercardContent">
-    
-               <h2 class="card-title">Sehan Shetty</h2>
-               <h3>CEO & Co-founder</h3>
-               <a href="#" class="cta">LinkedIN</a>
-            </div>
-             
-        </div>
+       
+       <ul id="autoWidth" class="cs-hidden">
+           
+           
+           <!--item a does not seem to work on the slider, therefore we have hidden it-->
+           <li class="item-a" hidden>
+                <div class="membercarda">
+                    <div class="membercardContent">
+
+                       <h2 class="card-title">Sehan Shetty</h2>
+                       <h3>CEO & Co-founder</h3>
+                       <a href="https://www.linkedin.com/in/sehan-shetty/" target="_blank" class="cta">LinkedIN</a>
+                    </div>
+
+                </div>
+            </li>
+            
+            <li class="item-b">
+
+                <div class="membercarda">
+                    <div class="membercardContent">
+
+                       <h2 class="card-title">Sehan Shetty</h2>
+                       <h3>CEO & Co-founder</h3>
+                       <a href="#" class="cta">LinkedIN</a>
+                    </div>
+
+                </div>
+            </li>
+            
+            <li class="item-c">
+
+                <div class="membercardb">
+                    <div class="membercardContent">
+
+                       <h2 class="card-title">Srujan Gupta</h2>
+                       <h3>COO & Co-founder</h3>
+                       <a href="https://www.linkedin.com/in/notsrujangupta/" target="_blank" class="cta">LinkedIN</a>
+                    </div>
+
+                </div>
+           </li>
+           
+           <li class="item-d">
+
+                <div class="membercardc">
+                    <div class="membercardContent">
+
+                       <h2 class="card-title">Swapnil Dubey</h2>
+                       <h3>CTO & Co-founder</h3>
+                       <a href="https://www.linkedin.com/in/swapnil-dubey" target="_blank" class="cta">LinkedIN</a>
+                    </div>
+
+                </div>
+           </li>
+           
+
+
         
-        <div class="membercardb">
-            <div class="membercardContent">
-    
-               <h2 class="card-title">Srujan Gupta</h2>
-               <h3>COO & Co-founder</h3>
-               <a href="#" class="cta">LinkedIN</a>
-            </div>
-             
-        </div>
-        
-        <div class="membercardc">
-            <div class="membercardContent">
-    
-               <h2 class="card-title">Swapnil Dubey</h2>
-               <h3>CTO & Co-founder</h3>
-               <a href="#" class="cta">LinkedIN</a>
-            </div>
-             
-        </div>
-        
+        </ul>
         
         </div>
         
@@ -384,38 +425,17 @@
     
   </section>
   <!-- End Footer -->
+   
+   <!--light slider script members section-->
+    <script type="application/javascript" src="js/lightsliderFunction.js"></script>
+    
+    <!--menu script-->
     <script src="./js/menu.js"></script>
     
-    <script>
-    var testimonialbtn = document.getElementsByClassName("testimonialbtn");
-    var slide = document.getElementById("slide");
-        
-        testimonialbtn[0].onclick = function(){
-            slide.style.transform="translatex(0px)";
-            
-            for(i=0;i<3;i++){
-                testimonialbtn[i].classList.remove("active");
-                this.classList.add("active");
-            }
-                                              }
-        testimonialbtn[1].onclick = function(){
-            slide.style.transform="translatex(-800px)";
-            
-            for(i=0;i<3;i++){
-                testimonialbtn[i].classList.remove("active");
-                this.classList.add("active");
-                                              }
-        }
-        testimonialbtn[2].onclick = function(){
-            slide.style.transform="translatex(-1600px)";
-            
-            for(i=0;i<3;i++){
-                testimonialbtn[i].classList.remove("active");
-                this.classList.add("active");
-                                              }
-        }
-        
-    </script>
+    
+    <!--testimonial script-->
+    <script src="js/testimonial.js"></script>
+    
     
 </body>
 </html>

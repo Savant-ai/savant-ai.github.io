@@ -85,11 +85,6 @@ a:link {
   text-decoration: none;
 }
 
-a:visited {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
 
 a:hover {
   color: darkblue;
@@ -97,11 +92,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
+
 
 .container {
 	min-height: 100vh;
@@ -449,7 +440,7 @@ p {
 }
 /* end about us*/
 
-/*members section*/
+/*old members section*/
 
 #members .members {
 	flex-direction: column-reverse;
@@ -496,7 +487,7 @@ p {
 	border: 7px solid skyblue;
 	z-index: -1;
 }
-/*end members section*/
+/*end old members section*/
 
 /*new members section*/
 
@@ -505,6 +496,7 @@ p {
     background-image: url(../img/Profile_images/sehan.png);
     background-size: cover;
     padding: 8rem 0 0;
+    margin:10px;
     min-width: 325px;
     min-height: 450px;
     border-radius: 10px;
@@ -516,6 +508,7 @@ p {
     background-image: url(../img/Profile_images/srujan.png);
     background-size: cover;
     padding: 8rem 0 0;
+    margin:10px;
     min-width: 325px;
     min-height: 450px;
     border-radius: 10px;
@@ -527,6 +520,7 @@ p {
     background-image: url(../img/Profile_images/swapnil.webp);
     background-size: cover;
     padding: 8rem 0 0;
+    margin: 10px;
     min-width: 325px;
     min-height: 450px;
     border-radius: 10px;
@@ -568,6 +562,7 @@ p {
 }
 .membercardContent .cta{
     border-radius: 10px;
+    color: white;
 }
 
 .card-title{
@@ -577,7 +572,7 @@ p {
 .card-title::after{
     content:'';
     position: absolute;
-    height: 5px;
+    height: 6px;
     left:calc(var(--padding)*-1);
     bottom:5px;
     width: calc(100% + var(--padding));
