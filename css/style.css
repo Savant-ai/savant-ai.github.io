@@ -498,57 +498,86 @@ p {
 }
 /*end members section*/
 
-/* old testimonials section*/
+/*new members section*/
 
-/*
-#testimonials .testimonials {
-	
-	max-width: 1200px;
-	margin: 0 auto;
-    text-align: center;
-    padding: 100px 30px;
-    max-width: 1500px;
-}
-#testimonials .testimonials-items {
-	width: 400px;
-}
-#testimonials .testimonials-item {
-	width: 80%;
-	padding: 20px;
-	text-align: center;
-	border-radius: 10px;
-	padding: 30px;
-	margin: 30px;
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: .3s ease box-shadow;
-}
-#testimonials .testimonials-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
-}
-#testimonials .icon {
-    
-	width: 300px;
-	margin: 0 auto ;
-	margin-bottom: 10px;
-}
-#testimonials .testimonials-info h1 {
-	font-size: 2.5rem;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-#testimonials .testimonials-info h2 {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	font-weight: 500;
+    /*individual cards*/
+.membercarda{
+    background-image: url(../img/Profile_images/sehan.png);
+    background-size: cover;
+    padding: 8rem 0 0;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow:hidden;
+    transition:transform 500ms ease;
+
 }
 
-*/
 
-/*end old testimonials section*/
+.membercarda h2{
+    font-size: 30px;
+    color: white;
+    padding-bottom: 10px;
+}
+.membercarda h3{
+    font-size: 15px;
+    color: white;
+}
+    /*end individual cards*/
+
+    /* generic card content*/
+.membercardContent{
+
+    --padding: 15px;
+    padding: var(--padding);
+    position: relative;
+    top:170px;
+    background: linear-gradient(
+    hsl(0 0% 0% /0 ),
+    hsl(0 0% 0% /0.3 )10%,
+    hsl(0 0% 0% /0.9 )
+    ); 
+}
+
+.membercardContent > *:not(.card-title) {
+    opacity:0;
+    transition: opacity 500ms linear;
+}
+.membercardContent .cta{
+    border-radius: 10px;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;  
+}
+.card-title::after{
+    content:'';
+    position: absolute;
+    height: 5px;
+    left:calc(var(--padding)*-1);
+    bottom:5px;
+    width: calc(100% + var(--padding));
+    background-color: skyblue; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+
+    /* end generic card content*/
+
+    /*individual card animations*/
+
+
+
+
+
+    /*end individual card animations*/
+
+
+
+/*end new members section*/
 
 /*new testimonials section*/
 .slide-row{
@@ -568,6 +597,7 @@ p {
 #testimonial-cards{
     margin: 50px;
     padding-top: 80px;
+    
 }
 
 .testimonialscontainer{
@@ -587,11 +617,12 @@ p {
     border-radius: 10px;
 }
 .testimonial-text{
-    background: #DFE8E0;
-    width:520px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    width:510px;
     height:270px;
     position: absolute;
-    left:0;
+    left:5%;
     top:50%;
     transform: translateY(-50%);
     border-radius: 10px;
@@ -711,6 +742,33 @@ p {
     }
 }
 /*end keyframes*/
+@media (hover){
+    .membercardContent{
+    transition: transform 500ms ease;
+    transform: translateY(70%);   
+    }
+    
+    .membercarda:hover{
+    transform: scale(1.05);
+}
+
+
+.membercarda:hover .card-title::after{
+    transform: scaleX(1);   
+}
+
+
+.membercarda:hover .membercardContent{
+    transform: translateY(0);
+    transition-delay:500ms ;   
+}
+
+
+.membercarda:hover .membercardContent > *:not(.card-title) {
+    opacity:1;
+    transition-delay: 600ms;
+}
+}
 
 @media screen and (max-width: 600px) {
   
