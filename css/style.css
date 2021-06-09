@@ -512,20 +512,43 @@ p {
     transition:transform 500ms ease;
 
 }
+.membercardb{
+    background-image: url(../img/Profile_images/srujan.png);
+    background-size: cover;
+    padding: 8rem 0 0;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow:hidden;
+    transition:transform 500ms ease;
+
+}
+.membercardc{
+    background-image: url(../img/Profile_images/swapnil.webp);
+    background-size: cover;
+    padding: 8rem 0 0;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow:hidden;
+    transition:transform 500ms ease;
+
+}
 
 
-.membercarda h2{
+
+    /*end individual cards*/
+
+    /* generic card content*/
+.membercardContent h2{
     font-size: 30px;
     color: white;
     padding-bottom: 10px;
 }
-.membercarda h3{
+.membercardContent h3{
     font-size: 15px;
     color: white;
 }
-    /*end individual cards*/
-
-    /* generic card content*/
 .membercardContent{
 
     --padding: 15px;
@@ -566,15 +589,6 @@ p {
 
 
     /* end generic card content*/
-
-    /*individual card animations*/
-
-
-
-
-
-    /*end individual card animations*/
-
 
 
 /*end new members section*/
@@ -749,24 +763,64 @@ p {
     }
     
     .membercarda:hover{
-    transform: scale(1.05);
+        transform: scale(1.05);
 }
 
 
-.membercarda:hover .card-title::after{
-    transform: scaleX(1);   
+    .membercarda:hover .card-title::after{
+        transform: scaleX(1);   
 }
 
 
-.membercarda:hover .membercardContent{
-    transform: translateY(0);
-    transition-delay:500ms ;   
+    .membercarda:hover .membercardContent{
+        transform: translateY(0);
+        transition-delay:500ms ;   
 }
 
 
-.membercarda:hover .membercardContent > *:not(.card-title) {
-    opacity:1;
-    transition-delay: 600ms;
+    .membercarda:hover .membercardContent > *:not(.card-title) {
+        opacity:1;
+        transition-delay: 600ms;
+}
+    .membercardb:hover{
+        transform: scale(1.05);
+}
+
+
+    .membercardb:hover .card-title::after{
+        transform: scaleX(1);   
+}
+
+
+    .membercardb:hover .membercardContent{
+        transform: translateY(0);
+        transition-delay:500ms ;   
+}
+
+
+    .membercardb:hover .membercardContent > *:not(.card-title) {
+        opacity:1;
+        transition-delay: 600ms;
+}
+    .membercardc:hover{
+        transform: scale(1.05);
+}
+
+
+    .membercardc:hover .card-title::after{
+        transform: scaleX(1);   
+}
+
+
+    .membercardc:hover .membercardContent{
+        transform: translateY(0);
+        transition-delay:500ms ;   
+}
+
+
+    .membercardc:hover .membercardContent > *:not(.card-title) {
+        opacity:1;
+        transition-delay: 600ms;
 }
 }
 
