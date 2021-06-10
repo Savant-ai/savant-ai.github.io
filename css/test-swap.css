@@ -1,59 +1,210 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+html {
+	/* font-size: 10px; */
+	font-family: 'Montserrat', sans-serif;
+	
+
+    font-weight: bold;
+}
 
 
-#header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
+@media only screen and (max-width: 991.5px) {
+    /* Hamburger CSS from Sehan */
+    #header .hamburger {
+        height: 60px;
+        width: 60px;
+        display: inline-block;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        cursor: pointer;
+        transform: scale(.8);
+        /* margin-right: 20px; */
+    }
+    #header .hamburger:after {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid white;
+        animation: hamburger_puls 1s ease infinite;
+    }
+    @keyframes hamburger_puls {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.4);
+        }
+    }
+    #header .hamburger .bar {
+        height: 2px;
+        width: 30px;
+        position: relative;
+        background-color: white;
+        z-index: -1;
+    }
+    #header .hamburger .bar::after,
+    #header .hamburger .bar::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: .3s ease;
+        transition-property: top, bottom;
+    }
+    #header .hamburger .bar::after {
+        top: 8px;
+    }
+    #header .hamburger .bar::before {
+        bottom: 8px;
+    }
+    #header .hamburger.active .bar::before {
+        bottom: 0;
+    }
+    #header .hamburger.active .bar::after {
+        top: 0;
+    }
+    /* End Header section */
+}
+
+
+
+
+
+/*Title section */
+
+canvas{
+    position: absolute;
+    /* at the forefront to view
+     animation Over Text */
+    z-index: 2; 
+}
+
+.container {
+    /* position: fixed; */
+	min-height: 100vh;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(.8);
-	/* margin-right: 20px; */
 }
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
+.title{
+    flex-direction: column;
 }
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
+
+#title{
+    content:'';
+    background-size: cover;
+    background-position: top center;
+    background-color: lightgray;
+    position: relative;
+    z-index: 1;
 }
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: .3s ease;
-	transition-property: top, bottom;
+
+
+#title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    
+    z-index:-1;
 }
-#header .hamburger .bar::after {
-	top: 8px;
+
+
+#title h1{
+    display:block;
+    width: fit-content;
+    /* font-size: 4rem; */
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
 }
-#header .hamburger .bar::before {
-	bottom: 8px;
+@keyframes text_reveal{
+    100%{
+        color: black;
+    }
 }
-#header .hamburger.active .bar::before {
-	bottom: 0;
+
+#title h1:nth-child(1){
+    animation-delay: .87s;
 }
-#header .hamburger.active .bar::after {
-	top: 0;
+#title h1:nth-child(2){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 1.9s;
 }
-/* End Header section */
+@keyframes text_reveal_name{
+    100%{
+        color: deepskyblue;
+        /* font-weight: 500px; */
+    }
+}
+
+#title h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: skyblue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left:0;
+    }
+    100%{
+        width:0;
+        left:100%;
+    }
+}
+
+
+#title h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#title h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+
+
+/*about us section*/
+#ourGoals .goals-item {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+#ourGoals .goals-title .section-title{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 3.75rem;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+}
+#ourGoals .goals-info {
+    border-left:1px solid black;
+    
+}
+#ourGoals .tagline{
+    font-size: 2rem;
+}
+/* end about us*/
