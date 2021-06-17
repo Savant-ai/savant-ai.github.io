@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+:root{
+	/* COLORS */
+
+	/* --background-color: #393E46; */
+	/* --text-h1: #393E46; */
+	/* --text-h2: white; */
+	--prev-white: white;
+	--prev-black: black;
+	--prev-darkblue: darkblue;
+	--prev-skyblue: red;
+	--transparent-bg: transparent;
+	--box-shadow: #0000002c;
+}
+
+body{
+	background-color: var(--background-color);
+}
 
 /* Overlay CSS */
 #overlay1, #overlay2, #overlay3 {
@@ -11,7 +28,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	background-color: rgba(0,0,0,0.5); /* black background with opacity */
 	z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
 	cursor: pointer; /* Add a pointer on hover */
   }
@@ -21,7 +38,7 @@
 	top: 50%;
 	left: 50%;
 	font-size: 50px;
-	color: white;
+	color: var(--prev-white);
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
@@ -59,7 +76,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 18px 0 var(--box-shadow);
 	/* transition: .3s ease box-shadow; */
   
 }
@@ -80,15 +97,15 @@ a {
 	text-decoration: none;
 }
 a:link {
-  color: skyblue;
-  background-color: transparent;
+  color: var(--prev-skyblue);
+  background-color: var(--transparent-bg);
   text-decoration: none;
 }
 
 
 a:hover {
-  color: darkblue;
-  background-color: transparent;
+  color: var(--prev-darkblue);
+  background-color: var(--transparent-bg);
   text-decoration: underline;
 }
 
@@ -116,7 +133,7 @@ canvas{
 }
  
 p {
-	color: black;
+	color: var(--prev-black);
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -126,22 +143,22 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
+	color: var(--prev-var(--prev-black));
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	text-align: center;
 }
 .section-title span {
-	color: skyblue;
+	color: var(--prev-skyblue);
 }
 
 .cta {
     display: inline-block;
 	padding: 5px 5px;
-	color: black;
-	background-color: transparent;
-	border: 2px solid skyblue;
+	color: var(--prev-black);
+	background-color: var(--transparent-bg);
+	border: 2px solid var(--prev-skyblue);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
@@ -150,17 +167,17 @@ p {
 	transition-property: background-color, color;
 }
 .cta:hover {
-	color: white;
-	background-color: skyblue;
+	color: var(--prev-white);
+	background-color: var(--prev-skyblue);
 }
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
+	color: var(--prev-white);
     
 }
 .brand h1 span {
-	color: skyblue;
+	color: var(--prev-skyblue);
 }
 
 
@@ -189,7 +206,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: black;
+	background-color: var(--prev-black);
 	transition: .3s ease background-color;
 }
 #header .nav-bar {
@@ -225,7 +242,7 @@ p {
 	font-weight: 500;
 	letter-spacing: .2rem;
 	text-decoration: none;
-	color: white;
+	color: var(--prev-white);
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
@@ -247,13 +264,13 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: skyblue;
+	color: var(--prev-skyblue);
 }
 #header .hamburger {
 	height: 60px;
 	width: 60px;
 	display: inline-block;
-	border: 3px solid white;
+	border: 3px solid var(--prev-white);
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -270,14 +287,14 @@ p {
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid var(--prev-white);
 	animation: hamburger_puls 1s ease infinite;
 }
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	background-color: white;
+	background-color: var(--prev-white);
 	z-index: -1;
 }
 #header .hamburger .bar::after,
@@ -287,7 +304,7 @@ p {
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: white;
+	background-color: var(--prev-white);
 	transition: .3s ease;
 	transition-property: top, bottom;
 }
@@ -325,7 +342,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: white; 
+    background-color: var(--prev-white); 
     
     z-index:-1;
 }
@@ -342,7 +359,7 @@ p {
     width: fit-content;
     font-size: 4rem;
     position: relative;
-    color: transparent;
+    color: var(--transparent-bg);
     animation: text_reveal .5s ease forwards;
     animation-delay: 1s;
 }
@@ -361,7 +378,7 @@ p {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: skyblue;
+    background-color: var(--prev-skyblue);
     animation: text_reveal_box 1s ease;
     animation-delay: 1s;
 }
@@ -399,11 +416,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 18px 0 var(--box-shadow);
 	transition: .3s ease box-shadow;
 }
 #services .services-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	box-shadow: 0px 0px 5px 0 var(--box-shadow);
 }
 #services .icon {
 	width: 70px;
@@ -435,7 +452,7 @@ p {
     margin-bottom: 10px;   
 }
 #ourGoals .goals-info {
-    border-left:1px solid black;
+    border-left:1px solid var(--prev-black);
     
 }
 /* end about us*/
@@ -475,7 +492,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 10px solid white;
+	border: 10px solid var(--prev-white);
 }
 #members .col-left .members-img::after {
 	content: '';
@@ -484,7 +501,7 @@ p {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid skyblue;
+	border: 7px solid var(--prev-skyblue);
 	z-index: -1;
 }
 /*end old members section*/
@@ -536,12 +553,12 @@ p {
     /* generic card content*/
 .membercardContent h2{
     font-size: 30px;
-    color: white;
+    color: var(--prev-white);
     padding-bottom: 10px;
 }
 .membercardContent h3{
     font-size: 15px;
-    color: white;
+    color: var(--prev-white);
 }
 .membercardContent{
 
@@ -562,7 +579,7 @@ p {
 }
 .membercardContent .cta{
     border-radius: 10px;
-    color: white;
+    color: var(--prev-white);
 }
 
 .card-title{
@@ -576,7 +593,7 @@ p {
     left:calc(var(--padding)*-1);
     bottom:5px;
     width: calc(100% + var(--padding));
-    background-color: skyblue; 
+    background-color: var(--prev-skyblue); 
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease;
@@ -613,7 +630,7 @@ p {
     width: 15px ;
     margin:4px ;
     border-radius:15px ;
-    background: black ;
+    background: var(--prev-black) ;
     cursor: pointer ;   
     transition: 0.5s ;
 }
@@ -647,7 +664,7 @@ p {
 .testimonial-text{
     /* Carousel Text Design */
     background: #FFFFFF ;
-    box-shadow: 0px 0px 18px 0 #0000002c ;
+    box-shadow: 0px 0px 18px 0 var(--box-shadow);
     border-radius: 10px ;
     padding:45px ;
     box-sizing:border-box ;
@@ -687,7 +704,7 @@ p {
 	padding-bottom: 10px;
 }
 #footer h2 {
-	color: white;
+	color: var(--prev-white);
 	font-weight: 500;
 	font-size: 1.8rem;
 	letter-spacing: .1rem;
@@ -711,7 +728,7 @@ p {
 	filter: grayscale(0);
 }
 #footer p {
-	color: white;
+	color: var(--prev-white);
 	font-size: 1.3rem;
 }
 /* End Footer */
@@ -741,12 +758,12 @@ p {
 }
 @keyframes text_reveal{
     100%{
-        color: black;
+        color: var(--prev-black);
     }
 }
 @keyframes text_reveal_name{
     100%{
-        color: deepskyblue;
+        color: deepvar(--prev-skyblue);
         font-weight: 500px;
     }
 }
@@ -829,7 +846,7 @@ p {
 		display: block;
 		height: auto;
 		width: fit-content;
-		background-color: transparent;
+		background-color: var(--transparent-bg);
 	}
 	#header .nav-list ul li {
 		display: inline-block;
@@ -914,7 +931,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid skyblue;
+		border: 10px solid var(--prev-skyblue);
 	}
 	#members .col-right {
 		text-align: left;
@@ -979,7 +996,7 @@ p {
 		display: block;
 		height: auto;
 		width: fit-content;
-		background-color: transparent;
+		background-color: var(--transparent-bg);
 	}
 	#header .nav-list ul li {
 		display: inline-block;
@@ -996,7 +1013,7 @@ p {
 	height: 400px;
 	width: 80px;
 	position: relative;
-	border: 10px solid white;
+	border: 10px solid var(--prev-white);
 }
 
     	#services .services-items {
