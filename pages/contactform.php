@@ -5,6 +5,7 @@
     <title>Savantium: Artificial intelligence consulting</title>
     
     <link rel ="stylesheet" href="/css/style.css">
+    <link rel ="stylesheet" href="/css/contact-style.css">
           
 </head>
 
@@ -31,43 +32,92 @@
        
         <div class="container">
             
-            <div>
-            
-            </div>
-            <FORM action="https://formsubmit.co/techsavai@gmail.com" method="post">
-              
-              
-               <div class =" form-group">
-               
-                
-                <input type="text" id = "firstname" name="firstname"  placeholder="First name">
-                </div>
-                  
-                <div class =" form-group">
-                
-                <input type="text" id =" lastname" name="lastname"  placeholder="Last name">
-                </div>
-                
-                <div class =" form-group">
-                
-                <input type="email" id="email" name="email"  placeholder="Email ID">
-                </div>
-                
-                <div class =" form-group">
-                
-                <input type="text" id="subject" name="subject"  placeholder="subject">
-                </div>
-                
-                <div class =" form-group">
-                
-                <textarea name="message" id= "message" placeholder="Message" cols="30" rows="10"></textarea>
-                </div>
-                
-                
-                <button class='cta' type="submit" name="submit">SUBMIT</button>
-               
+    
+    <span class="big-circle"></span>
 
-            </FORM>
+    <div class="form">
+    
+        <div class="contact-info">
+            <h3 class="contact-info-title">Reach out to us!</h3>
+            
+            <p>Do you have osmething to say, then say  it to our face bitch!</p>
+            
+                
+            <div class="info">
+                <div class="information">
+                   <img src="img/location.png" class="icon">
+                    <p>address</p>
+                </div>
+            </div>
+            
+            <div class="info">
+                <div class="information">
+                   <img src="img/email.png" class="icon">
+                    <p>EMAIL ID</p>
+                </div>
+            </div>
+            
+            <div class="info">
+                <div class="information">
+                   <img src="img/phone.png" class="icon">
+                    <p>PHONE</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contact-form">
+             <span class="circle one"></span>
+             <span class="circle two"></span>
+
+             <FORM action="https://formsubmit.co/techsavai@gmail.com" method="post">
+             
+             <h4 class="contact-title">Contact us</h4>
+
+
+                       <div class =" form-group">
+
+
+                        <input type="text" id = "firstname" name="firstname"  class="input">
+                        <label for="First name">First Name</label>
+                        <span>First Name</span>
+                        </div>
+
+                        <div class =" form-group">
+
+                        <input type="text" id =" lastname" name="lastname"  class="input">
+                        <label for="Last name">Last Name</label>
+                        <span>Last Name</span>
+                        </div>
+
+                        <div class =" form-group">
+
+                        <input type="email" id="email" name="email"  class="input">
+                        <label for="Email">Email ID</label>
+                        <span>Email ID</span>
+                        </div>
+
+                        <div class =" form-group">
+
+                        <input type="text" id="subject" name="subject"  class="input">
+                        <label for="Subject">Subject</label>
+                        <span>Subject</span>
+                        </div>
+
+                        <div class =" form-group textarea">
+
+                        <textarea name="message" id= "message" class="input" cols="30" rows="10"></textarea>
+                        <label for="Message">Message</label>
+                        <span>Message</span>
+                        </div>
+
+
+                        <button class='cta' type="submit" name="submit">SUBMIT</button>
+
+
+                    </FORM>
+                </div>
+            </div>
            
        
        </div>
