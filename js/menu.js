@@ -28,6 +28,22 @@ function off(num) {
 }
 
 
+var swiper = new Swiper(".swiper-container", {
+	effect: "coverflow",
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: "auto",
+	coverflowEffect: {
+	  rotate: 50,
+	  stretch: 0,
+	  depth: 100,
+	  modifier: 1,
+	  slideShadows: true,
+	},
+	pagination: {
+	  el: ".swiper-pagination",
+	},
+  });
 // Collapse function javascript
 // Source: https://medium.com/dailyjs/mimicking-bootstraps-collapse-with-vanilla-javascript-b3bb389040e7
 // const triggers = Array.from(document.querySelectorAll('[data-toggle="collapse"]'));
