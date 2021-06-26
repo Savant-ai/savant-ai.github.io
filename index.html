@@ -29,7 +29,11 @@
     
     <!-- stylesheets -->
     <link rel ="stylesheet" href="css/style.css">
-    <link rel ="stylesheet" href="css/lightslider.css">  
+    <link rel ="stylesheet" href="css/lightslider.css">      
+    <link rel ="stylesheet" href="css/services-cards.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    
      <!--jquery-->
      <script type="text/javascript" src="js/jquery-3.5.1.js"></script> 
@@ -228,6 +232,111 @@
                   <h2>Modernize your workflow with Savantium. We will augment your workforce, increase cost efficiency and automate tedious tasks.</h2>
                   <div onclick="off(1)" id="overlay1">
                         <div id="text1">Overlay Text1</div>
+                        <div class="overlay-wrapper" >
+
+                          <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide One</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide Two</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide Three</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide Four</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide Five</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="swiper-slide">
+                                      <div class="card">
+                                          <div class="sliderText">
+                                              <h3>Slide Six</h3>
+                                          </div>
+                                          <div class="content">
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                              Unde laboriosam dicta tenetur 
+                                              quod, dignissimos aliquam, dolor numquam aut 
+                                              ad exercitationem quis! Dicta eos dolorem dolores? 
+                                              Corporis illum repudiandae impedit quidem.</p>
+                                              <a href="#">Read More!!</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                          </div>
+                          
+                      </div>
                       </div>
                   <h2><button onclick="on(1)" class="cta">Learn more!</button></h2>
                 <!-- <h2><button data-toggle="collapse" data-target=".collapse.first" class="cta">Learn more!</button> -->
@@ -373,14 +482,36 @@
    
    <!--light slider script members section-->
     <script type="application/javascript" src="js/lightsliderFunction.js"></script>
-    
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 500,
+            modifier: 1,
+            slideShadows: true,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            },
+        });
+        console.log("its working")
+    </script>
+        
     <!--menu script-->
     <script src="./js/menu.js"></script>
     
     
     <!--testimonial script-->
     <script src="js/testimonial.js"></script>
-    
+
     
 </body>
 </html>
