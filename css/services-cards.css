@@ -1,4 +1,32 @@
+/* Close button */
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
 
+/* Coverflow Effects */
 .coverflow{
     align-self: center;
     display: flex !important;
@@ -6,6 +34,7 @@
     min-height: 100vh !important;
     background: #383838 !important;
 }
+
 
 .overlay-wrapper{
     margin: 0 !important;
@@ -25,8 +54,6 @@
     height: 500px !important;
     margin: 0 auto !important;
 }
-
-
 .card .content{
     width: 400px !important;
     padding: 30px !important;
@@ -63,4 +90,37 @@
 
 .swiper-slide:nth-child(1) .sliderText{
     background: #212121 !important;
+}
+.swiper-slide:nth-child(2) .sliderText{
+    background: #552155 !important;
+}
+.swiper-slide:nth-child(3) .sliderText{
+    background: #621569 !important;
+}
+.swiper-slide:nth-child(4) .sliderText{
+    background: #148563 !important;
+}
+.swiper-slide:nth-child(5) .sliderText{
+    background: #784239 !important;
+}
+.swiper-slide:nth-child(6) .sliderText{
+    background: #456264 !important;
+}
+.swiper-slide:nth-child(7) .sliderText{
+    background: #514896 !important;
+}
+
+
+.cover:nth-child(1) .sliderText{
+    background: #212121 !important;
+}
+.cover:nth-child(2) .sliderText{
+    background: #552155 !important;
+}
+.cover:nth-child(3) .sliderText{
+    background: #615448 !important;
+}
+
+@media screen and (max-width:600px){
+    /* Still Need to do all the mobile CSS 😭😭 */
 }
