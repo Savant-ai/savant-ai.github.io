@@ -1,3 +1,8 @@
+*{
+    --body-bg: #6e6e6e ;
+    --text-background: #fff ;
+}
+
 /* Close button */
 .close {
     position: absolute;
@@ -5,10 +10,6 @@
     top: 32px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
-  }
-  .close:hover {
-    opacity: 1;
   }
   .close:before, .close:after {
     position: absolute;
@@ -32,7 +33,7 @@
     display: flex !important;
     align-items: center !important;
     min-height: 100vh !important;
-    background: #383838 !important;
+    background: var(--body-bg) !important;
 }
 
 
@@ -43,13 +44,13 @@
     justify-content: center !important;
     align-items: center !important;
     min-height: 100vh !important;
-    background: #383838 !important;
+    background: var(--body-bg) !important;
     font-family: 'Poppins', sans-serif !important;
 }
 
 .card  {
     position: relative !important;
-    background: #fff0ff !important;
+    background: var(--text-background) !important;
     width: 400px !important;
     height: 500px !important;
     margin: 0 auto !important;
@@ -80,7 +81,7 @@
     background: #000 !important;
 }
 .card .sliderText h3{
-    color: #fff !important;
+    color: var(--text-background) !important;
     font-size: 3rem !important;
 }
 
