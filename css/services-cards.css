@@ -120,6 +120,18 @@
 .cover:nth-child(3) .sliderText{
     background: #615448 !important;
 }
+.cover:nth-child(4) .sliderText{
+    background: #148563 !important;
+}
+.cover:nth-child(5) .sliderText{
+    background: #784239 !important;
+}
+.cover:nth-child(6) .sliderText{
+    background: #456264 !important;
+}
+.cover:nth-child(7) .sliderText{
+    background: #514896 !important;
+}
 
 @media screen and (max-width:600px){
     /* Still Need to do all the mobile CSS 😭😭 */
