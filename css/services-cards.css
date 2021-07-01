@@ -1,13 +1,11 @@
-/* body{
-    margin: 0 !important;
-    padding: 0 !important;
+
+.coverflow{
+    align-self: center;
     display: flex !important;
-    justify-content: center !important;
     align-items: center !important;
     min-height: 100vh !important;
     background: #383838 !important;
-    font-family: 'Poppins', sans-serif !important;
-} */
+}
 
 .overlay-wrapper{
     margin: 0 !important;
