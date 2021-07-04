@@ -16,6 +16,24 @@
 
 body{
 	background-color: var(--background-color);
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+.maincontainer{
+	width: 100%;
+	height: 100%;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
+.maincontainer section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	scroll-snap-align: start;
 }
 
 /* Overlay CSS */
@@ -143,7 +161,7 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: var(--prev-var(--prev-black));
+	color: var(--prev-black);
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
@@ -1110,7 +1128,7 @@ textarea.input{
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   
 	#header .hamburger {
 		display: none;
@@ -1137,7 +1155,10 @@ textarea.input{
 	font-size: 5px;
     }
     
-
+	#services .services-items{
+		align-items: center;
+		flex-direction: column;
+	}
 
 }
 /* Media Query For Tablet */
@@ -1167,7 +1188,8 @@ textarea.input{
 	#services .services-items {
 		width: 100%;
 		display: flex;
-		flex-direction: row;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-evenly;
 		margin-top: 10px;
 	}
