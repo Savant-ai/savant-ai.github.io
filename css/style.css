@@ -33,7 +33,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 	scroll-snap-align: start;
 }
 
@@ -628,6 +628,7 @@ p {
 #testimonial-cards{
 	display: flex ;
 	flex-direction: column ;
+	padding: 100px 0;
 }
 
 
@@ -1172,6 +1173,20 @@ textarea.input{
 		font-size: 6rem;
 	}
 
+	#ourGoals .goals {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#ourGoals .goals .goals-title{
+		/* flex: 1; */
+	}
+	#ourGoals .goals .goals-info{
+		margin: 100px;
+		/* flex: 2; */
+
+	}
 	/* Hero */
 	#hero h1 {
 		font-size: 7rem;
