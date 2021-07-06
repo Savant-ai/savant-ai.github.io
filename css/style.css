@@ -461,19 +461,34 @@ p {
 /* end services section*/
 
 /*about us section*/
+#ourGoals .goals {
+	display: flex;
+	/* flex-direction: row; */
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+#ourGoals .goals .goals-title{
+	flex-shrink: 0;
+	flex-basis: 50px;
+	flex-grow: 1;
+	margin: 50px;
+	margin-right: 20px;
+	margin-bottom: 10px;   
+}
+#ourGoals .goals .goals-info{
+	flex-basis: 900px;
+	flex-grow: 4;
+	margin: 50px;
+	border-left:1px solid var(--prev-black);
+}
 #ourGoals .goals-item {
     margin-left: 20px;
     margin-bottom: 10px;
     
 }
-#ourGoals .goals-title {
-    margin-right: 20px;
-    margin-bottom: 10px;   
-}
-#ourGoals .goals-info {
-    border-left:1px solid var(--prev-black);
-    
-}
+
 /* end about us*/
 
 /*old members section*/
@@ -1173,20 +1188,6 @@ textarea.input{
 		font-size: 6rem;
 	}
 
-	#ourGoals .goals {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	#ourGoals .goals .goals-title{
-		/* flex: 1; */
-	}
-	#ourGoals .goals .goals-info{
-		margin: 100px;
-		/* flex: 2; */
-
-	}
 	/* Hero */
 	#hero h1 {
 		font-size: 7rem;
