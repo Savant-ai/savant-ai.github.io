@@ -1,6 +1,8 @@
 *{
     --body-bg: #6e6e6e ;
     --text-background: #fff ;
+    --swiper-width-lg: 400px ;
+    --swiper-width-sm: 200px ;
 }
 
 /* Close button */
@@ -30,110 +32,123 @@
 /* Coverflow Effects */
 .coverflow{
     align-self: center;
-    display: flex !important;
-    align-items: center !important;
-    min-height: 100vh !important;
-    background: var(--body-bg) !important;
+    display: flex  ;
+    align-items: center  ;
+    min-height: 100vh  ;
+    background: var(--body-bg)  ;
 }
 
-
+/* Remnant of a feature no longer in use */
 .overlay-wrapper{
-    margin: 0 !important;
-    padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    min-height: 100vh !important;
-    background: var(--body-bg) !important;
-    font-family: 'Poppins', sans-serif !important;
+    margin: 0  ;
+    padding: 0  ;
+    display: flex  ;
+    justify-content: center  ;
+    align-items: center  ;
+    min-height: 100vh  ;
+    background: var(--body-bg)  ;
+    font-family: 'Poppins', sans-serif  ;
 }
 
 .card  {
-    position: relative !important;
-    background: var(--text-background) !important;
-    width: 400px !important;
-    height: 500px !important;
-    margin: 0 auto !important;
+    position: relative  ;
+    background: var(--text-background)  ;
+    width: var(--swiper-width-lg);
+    height: calc(var(--swiper-width-lg) * 5 / 4);
+    margin: 0 auto  ;
 }
 .card .content{
-    width: 400px !important;
-    padding: 30px !important;
-    box-sizing: border-box !important;
+    /* width: 400px  ; */
+    padding: 30px  ;
+    box-sizing: border-box  ;
+    flex-grow: 1;
 }
 .card .content a{
-    display: inline-block !important;
-    margin: 10px 0 0 !important;
-    padding: 10px 20px !important;
-    text-decoration: none !important;
-    border: 2px solid #000 !important;
-    color: #262626 !important;
-    font-weight: 600 !important;
+    display: inline-block  ;
+    margin: 10px 0 0  ;
+    padding: 10px 20px  ;
+    text-decoration: none  ;
+    border: 2px solid #000  ;
+    color: #262626  ;
+    font-weight: 600  ;
 }
 
 
 .card .sliderText{
-    position: relative !important;
-    width: 100% !important;
-    height: 200px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background: #000 !important;
+    position: relative  ;
+    width: 100%  ;
+    height: 40%;
+    display: flex  ;
+    justify-content: center  ;
+    align-items: center  ;
+    background: #000  ;
+    /* flex-grow: 1; */
 }
 .card .sliderText h3{
-    color: var(--text-background) !important;
-    font-size: 3rem !important;
+    color: var(--text-background)  ;
+    font-size: 3rem  ;
 }
 
 .swiper-slide{
-    width: 400px !important;
+    width: var(--swiper-width-lg) !important;
 }
 
 .swiper-slide:nth-child(1) .sliderText{
-    background: #212121 !important;
+    background: #212121  ;
 }
 .swiper-slide:nth-child(2) .sliderText{
-    background: #552155 !important;
+    background: #552155  ;
 }
 .swiper-slide:nth-child(3) .sliderText{
-    background: #621569 !important;
+    background: #621569  ;
 }
 .swiper-slide:nth-child(4) .sliderText{
-    background: #148563 !important;
+    background: #148563  ;
 }
 .swiper-slide:nth-child(5) .sliderText{
-    background: #784239 !important;
+    background: #784239  ;
 }
 .swiper-slide:nth-child(6) .sliderText{
-    background: #456264 !important;
+    background: #456264  ;
 }
 .swiper-slide:nth-child(7) .sliderText{
-    background: #514896 !important;
+    background: #514896  ;
 }
 
 
 .cover:nth-child(1) .sliderText{
-    background: #212121 !important;
+    background: #212121  ;
 }
 .cover:nth-child(2) .sliderText{
-    background: #552155 !important;
+    background: #552155  ;
 }
 .cover:nth-child(3) .sliderText{
-    background: #615448 !important;
+    background: #615448  ;
 }
 .cover:nth-child(4) .sliderText{
-    background: #148563 !important;
+    background: #148563  ;
 }
 .cover:nth-child(5) .sliderText{
-    background: #784239 !important;
+    background: #784239  ;
 }
 .cover:nth-child(6) .sliderText{
-    background: #456264 !important;
+    background: #456264  ;
 }
 .cover:nth-child(7) .sliderText{
-    background: #514896 !important;
+    background: #514896  ;
 }
 
 @media screen and (max-width:600px){
-    /* Still Need to do all the mobile CSS 😭😭 */
+    /* Some responsiveness done 😇😇 */
+    .swiper-slide{
+        width: var(--swiper-width-sm) !important;
+    }
+    .card{
+        width: var(--swiper-width-sm);
+        height: calc(var(--swiper-width-sm) * 5 / 4);
+    }
+
+    .card .content{
+        padding: 10px;
+    }
 }
