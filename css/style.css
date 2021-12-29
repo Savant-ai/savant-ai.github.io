@@ -460,6 +460,54 @@ p {
 
 /* end services section*/
 
+/* Products section*/
+
+#products .products {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#products .products-items {
+	width: 400px;
+}
+#products .products-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0 var(--box-shadow);
+	transition: .3s ease box-shadow;
+}
+#products .products-item:hover {
+	box-shadow: 0px 0px 5px 0 var(--box-shadow);
+}
+#products .icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+#products .products-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#products .products-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+/* end products section*/
+
 /*about us section*/
 #ourGoals .goals {
 	display: flex;
