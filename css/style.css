@@ -405,14 +405,7 @@ p {
 }
 #title h2 {
   animation: fadeIn 5s;
-  font: 
-}
-#title title{
-  display: flex;
-  justify-content:center;
-  justify-self:center;
-  align-self: center;
-  align-content: center;
+  /* font: Monteserat; */
 }
 @keyframes fadeIn {
   0% {
@@ -435,7 +428,7 @@ p {
 .arrow_content {
   position: absolute;
   left: 50%;
-  top: 95%;
+  top: 92%;
   transform: translate(-50%, -50%);
 }
 .arrow_content p {
