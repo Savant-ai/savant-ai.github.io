@@ -405,7 +405,7 @@ p {
 }
 #title h2 {
   animation: fadeIn 5s;
-  /* font: Monteserat; */
+  font-family: 'Montserrat', sans-serif;
 }
 @keyframes fadeIn {
   0% {
