@@ -1,0 +1,313 @@
+@import url(base.css);
+@import url(components/navbar.css);
+@import url(components/footer.css);
+
+section {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+/*****************/
+/* Title section */
+/*****************/
+#title video {
+    width: 100%;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/******************/
+/*about us section*/
+/******************/
+.aboutslide {
+    position: relative;
+    width: 100%;
+    /* background-color: cadetblue; */
+    font: black;
+    overflow: hidden;
+}
+.myslide {
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: var(--prev-black);
+    transition: 0.1s;
+    user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+    color: var(--prev-skyblue);
+}
+.next {
+    right: 0;
+}
+
+.dotsbox {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 2%;
+    cursor: pointer;
+}
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    border: 3px solid var(--prev-black);
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.about_us_active,
+.dot:hover {
+    border-color: var(--prev-skyblue);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.abouttext {
+    position: absolute;
+    /* color: #fff; */
+    width: 60%;
+    letter-spacing: 2px;
+    line-height: 35px;
+    top: 5%;
+    left: 20%;
+    right: 20%;
+    animation-name: post;
+    animation-duration: 2s;
+    -webkit-animation-name: post;
+    -webkit-animation-duration: 2s;
+    z-index: 1;
+}
+
+.abouttext h1 {
+    position: relative;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    font-size: 74px;
+    text-align: center;
+    line-height: 100px;
+
+    margin-top: 20%;
+}
+.abouttext h2 {
+    font-weight: lighter;
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    margin-top: 10%;
+}
+
+.abouttext p {
+    top: 40%;
+    bottom: 30%;
+
+    font-weight: lighter;
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.aboutslide img {
+    filter: hue-rotate(10deg) brightness(50%) grayscale(10%);
+    height: 100%;
+    width: 80%;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes post {
+    from {
+        left: 30%;
+    }
+    to {
+        left: 20%;
+    }
+}
+@keyframes post {
+    from {
+        left: 30%;
+    }
+    to {
+        left: 20%;
+    }
+}
+/* end about section*/
+
+/* **************** */
+/* services section */
+/* **************** */
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .services-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+#services .services-item {
+    max-width: 400px;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 var(--box-shadow);
+    transition: 0.3s ease box-shadow;
+}
+#services .services-item:hover {
+    box-shadow: 0px 0px 5px 0 var(--box-shadow);
+}
+#services .icon {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#services .services-info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#services .services-info h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/* end services section*/
+
+/************************/
+/* testimonials section */
+/************************/
+#testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+	overflow: hidden;
+}
+
+.testimonial-indicator {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+}
+.testimonialbtn {
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: var(--prev-black);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.active-card {
+    width: 35px;
+}
+.testimonial-cards {
+    width: 800px;
+	overflow: hidden;
+}
+.slide-row {
+	display: flex;
+    width: fit-content;
+    transition: 0.5s;
+}
+.slide-col {
+	/* Necessary for Viewport */
+	width: 80rem;
+	height: 40rem;
+  
+	/* Flex Aligning */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0 auto;
+  }
+.testimonial-text {
+    /* Carousel Text Design */
+    background: #ffffff;
+    box-shadow: 0px 0px 18px 0 var(--box-shadow);
+    border-radius: 10px;
+    padding: 45px;
+    box-sizing: border-box;
+
+    /* Carousel Text Position */
+    z-index: 2;
+    height: 67.5%;
+    width: 60%;
+	min-width: 300px;
+}
+.testimonial-text p {
+    font-size: 18px;
+    line-height: 24px;
+}
+.testimonial-img {
+    height: 100%;
+    width: 32rem;
+    margin-left: -9%;
+}
+.testimonial-img img {
+    border-radius: 10px;
+}
+
+/*end new testimonials section*/
