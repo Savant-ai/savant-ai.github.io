@@ -1,0 +1,269 @@
+@import url(base.css);
+@import url(components/navbar.css);
+@import url(components/footer.css);
+@import url(components/lightslider.css);
+
+/*Title section */
+
+.maincontainer {
+    isolation: isolate;
+}
+#title {
+    content: "";
+    background-size: cover;
+    background-position: top center;
+    background-color: lightgray;
+    position: relative;
+    z-index: 1;
+}
+
+#title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--prev-white);
+
+    z-index: -1;
+}
+#title .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#title h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: var(--transparent-bg);
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes text_reveal {
+    100% {
+        color: var(--prev-black);
+    }
+}
+
+#title h1:nth-child(1) {
+    animation-delay: 0.87s;
+}
+#title h1:nth-child(2) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 1.9s;
+}
+@keyframes text_reveal_name {
+    100% {
+        color: deepskyblue;
+        font-weight: 500px;
+    }
+}
+#title h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--prev-skyblue);
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+#title h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+#title h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+/*End Title section */
+
+/* members */
+#members .members {
+    flex-direction: row;
+    justify-content: center;
+}
+#members .col-left {
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+#members .members .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid var(--prev-skyblue);
+}
+#members .col-right {
+    text-align: left;
+    padding: 30px;
+}
+#members .col-right h1 {
+    text-align: left;
+}
+/* End members */
+
+/*new members section*/
+
+/*individual cards*/
+.membercarda {
+    background-image: url(../img/Profile_images/sehan.png);
+    background-size: cover;
+    padding: 8rem 0 0;
+    margin: 10px;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+.membercardb {
+    background-image: url(../img/Profile_images/srujan.png);
+    background-size: cover;
+    padding: 8rem 0 0;
+    margin: 10px;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+.membercardc {
+    background-image: url(../img/Profile_images/swapnil.webp);
+    background-size: cover;
+    padding: 8rem 0 0;
+    margin: 10px;
+    min-width: 325px;
+    min-height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+/*end individual cards*/
+
+/* generic card content*/
+.membercardContent h2 {
+    font-size: 30px;
+    color: var(--prev-white);
+    padding-bottom: 10px;
+}
+.membercardContent h3 {
+    font-size: 15px;
+    color: var(--prev-white);
+}
+.membercardContent {
+    --padding: 15px;
+    padding: var(--padding);
+    position: relative;
+    top: 170px;
+    background: linear-gradient(
+        hsl(0 0% 0% /0),
+        hsl(0 0% 0% /0.3) 10%,
+        hsl(0 0% 0% /0.9)
+    );
+}
+
+.membercardContent > *:not(.card-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+.membercardContent .cta {
+    border-radius: 10px;
+    color: var(--prev-white);
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    left: calc(var(--padding) * -1);
+    bottom: 5px;
+    width: calc(100% + var(--padding));
+    background-color: var(--prev-skyblue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+/* end generic card content*/
+
+/*end new members section*/
+
+@media (hover) {
+    .membercardContent {
+        transition: transform 500ms ease;
+        transform: translateY(70%);
+    }
+
+    .membercarda:hover {
+        transform: scale(1.05);
+    }
+
+    .membercarda:hover .card-title::after {
+        transform: scaleX(1);
+    }
+
+    .membercarda:hover .membercardContent {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .membercarda:hover .membercardContent > *:not(.card-title) {
+        opacity: 1;
+        transition-delay: 600ms;
+    }
+    .membercardb:hover {
+        transform: scale(1.05);
+    }
+
+    .membercardb:hover .card-title::after {
+        transform: scaleX(1);
+    }
+
+    .membercardb:hover .membercardContent {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .membercardb:hover .membercardContent > *:not(.card-title) {
+        opacity: 1;
+        transition-delay: 600ms;
+    }
+    .membercardc:hover {
+        transform: scale(1.05);
+    }
+
+    .membercardc:hover .card-title::after {
+        transform: scaleX(1);
+    }
+
+    .membercardc:hover .membercardContent {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .membercardc:hover .membercardContent > *:not(.card-title) {
+        opacity: 1;
+        transition-delay: 600ms;
+    }
+}
